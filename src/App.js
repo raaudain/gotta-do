@@ -1,23 +1,23 @@
-import React from 'react';
+import React from "react";
 import TodoList from "./components/TodoList";
 import TodoForm from "./components/TodoForm";
 import "./css/Todo.css";
 
 class App extends React.Component {
-  
-  constructor(){
+  constructor() {
     super();
     this.state = {
-      todos: 
+      todos:
         // Retrieves and displays items from local storage
-        localStorage.getItem("todos") 
-        ? JSON.parse(localStorage.getItem("todos")) : []
-    }
+        localStorage.getItem("todos")
+          ? JSON.parse(localStorage.getItem("todos"))
+          : []
+    };
   }
 
   // Sets items in local storage
-  componentDidUpdate(){
-      localStorage.setItem("todos", JSON.stringify(this.state.todos));
+  componentDidUpdate() {
+    localStorage.setItem("todos", JSON.stringify(this.state.todos));
   }
 
   // Toggles item as FALSE or TRUE when clicked.
@@ -25,19 +25,18 @@ class App extends React.Component {
     console.log(`Item number: ${id}`);
     this.setState({
       todos: this.state.todos.map(item => {
-        if(item.id === id){
+        if (item.id === id) {
           console.log(`Completed: ${!item.isDone}`); // Shows value item should be once clicked.
-          return{
-            ...item,  // Spread operator flattens array
+          return {
+            ...item, // Spread operator flattens array
             isDone: !item.isDone // If the "id is equal, change the value from false to true"
           };
-        }
-        else{
+        } else {
           return item;
         }
       })
     });
-  }
+  };
 
   addItem = itemName => {
     // Creates new item
@@ -48,24 +47,21 @@ class App extends React.Component {
     };
     this.setState({
       todos: [...this.state.todos, newItem] // Adds new item to the end of the Todos array.
-
     });
-  }
+  };
 
   clearCompleted = () => {
     this.setState({
       todos: this.state.todos.filter(item => !item.isDone) // Looking for uncompleted tasks
     });
-  }
+  };
 
   render() {
     return (
       <div className="container">
         <h2>Gotta Do List</h2>
-        <TodoForm 
-          addItem={this.addItem} 
-        />
-      
+        <TodoForm addItem={this.addItem} />
+
         <TodoList
           todos={this.state.todos}
           toggleItem={this.toggleItem}
@@ -74,7 +70,6 @@ class App extends React.Component {
       </div>
     );
   }
-
 }
 
 export default App;
