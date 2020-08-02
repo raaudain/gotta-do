@@ -2,13 +2,25 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
+    <link rel="icon" type="image/png" href="./img/logo.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
-    <meta description="A React todo app by Ramon Audain." />
+    <meta description="A React PWA todo app by Ramon Audain." />
+    <link rel="apple-touch-icon" href="./img/logo.png" />
+    <link rel="manifest" href="./manifest.json" />
     <title>Whatcha gotta do?</title>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
+    <script>
+      if ("serviceWorker" in navigator) {
+        window.addEventListener("load", () => {
+          navigator.serviceWorker.register("./serviceworker.js")
+            .then(reg => console.log("Success: ", reg.scope))
+            .catch(err => console.log(err.response));
+        })
+      }
+    </script>
   </body>
 </html>

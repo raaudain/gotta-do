@@ -20,8 +20,7 @@ class TodoForm extends React.Component {
     this.props.addItem(this.state.item); // addItem function located in App.js
   };
 
-  placeholderText =
-    window.innerWidth > 600 ? "Whatcha gotta do?" : "Enter task...";
+  placeholderText = window.innerWidth > 600 ? "Whatcha gotta do?" : "Enter task...";
 
   render() {
     return (
