@@ -17,10 +17,16 @@ class TodoForm extends React.Component {
   submitHandler = event => {
     event.preventDefault();
     event.target.reset(); // Resets value to blank
-    this.props.addItem(this.state.item); // addItem function located in App.js
+    if (this.state.item !== "") {
+      this.props.addItem(this.state.item); // addItem function located in App.js
+    }
   };
 
-  placeholderText = window.innerWidth > 600 ? "Whatcha gotta do?" : "Enter task...";
+  // For reference
+  // If window is larger than 600px...
+  // placeholderText = window.innerWidth > 600 ? "Whatcha gotta do?" : "Enter task...";
+
+  placeholderText = "Enter task...";
 
   render() {
     return (

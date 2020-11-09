@@ -45,6 +45,7 @@ class App extends React.Component {
       id: Date.now(),
       isDone: false
     };
+
     this.setState({
       todos: [...this.state.todos, newItem] // Adds new item to the end of the Todos array.
     });

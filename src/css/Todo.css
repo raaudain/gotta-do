@@ -1,14 +1,14 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto");
-input:focus,
-select:focus,
-textarea:focus,
-button:focus {
-  outline: none;
-}
-
 html {
   font-size: 62.5%;
   background-color: #100e17;
+}
+
+html input:focus,
+html select:focus,
+html textarea:focus,
+html button:focus {
+  outline: none;
 }
 
 html .container {
