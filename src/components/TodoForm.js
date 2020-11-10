@@ -10,7 +10,7 @@ class TodoForm extends React.Component {
 
   changeHandler = (event) => {
     this.setState({
-      [event.target.name]: event.target.value,
+      [event.target.name]: event.target.value
     });
   };
 
@@ -39,7 +39,6 @@ class TodoForm extends React.Component {
           name="item"
           onChange={this.changeHandler}
         />
-
         <button className="addBtn">Add</button>
       </form>
     );

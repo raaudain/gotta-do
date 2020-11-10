@@ -1,6 +1,5 @@
 import React from "react";
 
-// Props from TodoList.js
 class Todo extends React.Component {
   render() {
     return (
