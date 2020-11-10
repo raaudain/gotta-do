@@ -3,7 +3,7 @@ import Todo from "./Todo";
 
 // Getting props from App.js
 class TodoList extends React.Component {
-  render(){
+  render() {
     return (
       <div className="todolist">
         {this.props.todos.map(item => (

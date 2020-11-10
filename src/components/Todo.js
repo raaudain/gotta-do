@@ -3,7 +3,6 @@ import React from "react";
 // Props from TodoList.js
 class Todo extends React.Component {
   render() {
-    console.log(this)
     return (
       <div
         // Changes class name when item is clicked.  toggleItem function in App.js
@@ -15,6 +14,5 @@ class Todo extends React.Component {
     );
   };
 }
-
 
 export default Todo;

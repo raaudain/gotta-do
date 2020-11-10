@@ -23,7 +23,7 @@ class TodoForm extends React.Component {
   };
 
   // For reference
-  // If window is larger than 600px...
+  // If browser width is larger than 600px...
   // placeholderText = window.innerWidth > 600 ? "Whatcha gotta do?" : "Enter task...";
 
   placeholderText = "Enter task...";

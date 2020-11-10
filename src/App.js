@@ -20,24 +20,6 @@ class App extends React.Component {
     localStorage.setItem("todos", JSON.stringify(this.state.todos));
   }
 
-  // Toggles item as FALSE or TRUE when clicked.
-  toggleItem = id => {
-    console.log(`Item number: ${id}`);
-    this.setState({
-      todos: this.state.todos.map(item => {
-        if (item.id === id) {
-          console.log(`Completed: ${!item.isDone}`); // Shows value item should be once clicked.
-          return {
-            ...item, // Spread operator flattens array
-            isDone: !item.isDone // If the "id is equal, change the value from false to true"
-          };
-        } else {
-          return item;
-        }
-      })
-    });
-  };
-
   addItem = itemName => {
     // Creates new item
     const newItem = {
@@ -48,6 +30,22 @@ class App extends React.Component {
 
     this.setState({
       todos: [...this.state.todos, newItem] // Adds new item to the end of the Todos array.
+    });
+  };
+
+  // Toggles item as FALSE or TRUE when clicked.
+  toggleItem = id => {
+    this.setState({
+      todos: this.state.todos.map(item => {
+        if (item.id === id) {
+          return {
+            ...item, // Spread operator flattens array
+            isDone: !item.isDone // If the "id is equal, change the value from false to true"
+          };
+        } else {
+          return item;
+        }
+      })
     });
   };
 
