@@ -4,7 +4,7 @@ class TodoForm extends React.Component {
   constructor() {
     super();
     this.state = {
-      item: ""
+      item: null
     };
   }
 
@@ -16,10 +16,17 @@ class TodoForm extends React.Component {
 
   submitHandler = (event) => {
     event.preventDefault();
-    event.target.reset(); // Resets value to blank
-    if (this.state.item !== "") {
-      this.props.addItem(this.state.item); // addItem function located in App.js
+    event.target.reset(); // Resets value/text field to blank
+    
+    // Checks if there is text before submission
+    if (this.state.item) {
+      this.props.addItem(this.state.item);
     }
+
+    // Resets the state to null
+    this.setState({
+      item: null
+    });
   };
 
   // For reference
