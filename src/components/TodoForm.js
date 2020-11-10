@@ -8,16 +8,16 @@ class TodoForm extends React.Component {
     };
   }
 
-  changeHandler = event => {
+  changeHandler = (event) => {
     this.setState({
-      [event.target.name]: event.target.value
+      [event.target.name]: event.target.value,
     });
   };
 
-  submitHandler = event => {
+  submitHandler = (event) => {
     event.preventDefault();
     event.target.reset(); // Resets value to blank
-    if (this.state.item !== "") {
+    if (this.state.item) {
       this.props.addItem(this.state.item); // addItem function located in App.js
     }
   };

@@ -74,6 +74,10 @@ html .container .todolist .item, html .container .todolist .itemCompleted {
   vertical-align: middle;
 }
 
+html .container .todolist .item p, html .container .todolist .itemCompleted p {
+  text-align: center;
+}
+
 html .container .todolist .itemCompleted {
   text-decoration: line-through;
 }
