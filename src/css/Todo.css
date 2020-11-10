@@ -79,7 +79,11 @@ html .container .todolist .item p, html .container .todolist .itemCompleted p {
 }
 
 html .container .todolist .itemCompleted {
-  text-decoration: line-through;
+  text-decoration-thickness: 12px;
+  -webkit-text-decoration-line: line-through;
+          text-decoration-line: line-through;
+  -webkit-text-decoration-color: #100e17;
+          text-decoration-color: #100e17;
 }
 
 html .container .todolist .clearBtn {

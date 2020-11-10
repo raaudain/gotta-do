@@ -69,7 +69,9 @@ html {
             }
 
             .itemCompleted {
-                text-decoration: line-through;
+                text-decoration-thickness: 12px;
+                text-decoration-line: line-through;
+                text-decoration-color: #100e17;
             }
 
             .clearBtn {
