@@ -72,6 +72,7 @@ html .container .todolist .item, html .container .todolist .itemCompleted {
   border-radius: 10px;
   background-color: #2E8B57;
   vertical-align: middle;
+  cursor: default;
 }
 
 html .container .todolist .item p, html .container .todolist .itemCompleted p {
@@ -79,11 +80,9 @@ html .container .todolist .item p, html .container .todolist .itemCompleted p {
 }
 
 html .container .todolist .itemCompleted {
-  text-decoration-thickness: 12px;
   -webkit-text-decoration-line: line-through;
           text-decoration-line: line-through;
-  -webkit-text-decoration-color: #100e17;
-          text-decoration-color: #100e17;
+  color: rgba(255, 255, 255, 0.2);
 }
 
 html .container .todolist .clearBtn {

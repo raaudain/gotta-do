@@ -50,7 +50,7 @@ class Homepage extends React.Component {
 
   clearCompleted = () => {
     this.setState({
-      todos: this.state.todos.filter((item) => !item.isDone) // Looking for uncompleted tasks
+      todos: this.state.todos.filter((item) => !item.isDone), // Looking for uncompleted tasks
     });
   };
 
@@ -58,7 +58,7 @@ class Homepage extends React.Component {
     return (
       <>
         <h2>Gotta Do List</h2>
-        <TodoForm addItem={this.addItem} />
+        <TodoForm addItem={this.addItem} todos={this.state.todos}/>
         <TodoList
           todos={this.state.todos}
           toggleItem={this.toggleItem}

@@ -61,6 +61,7 @@ html {
                 border-radius: 10px;
                 background-color: #2E8B57;
                 vertical-align: middle;
+                cursor: default;
                 
                 p {
                     text-align: center;
@@ -68,9 +69,8 @@ html {
             }
 
             .itemCompleted {
-                text-decoration-thickness: 12px;
                 text-decoration-line: line-through;
-                text-decoration-color: #100e17;
+                color: rgba(255, 255, 255, 0.2);
             }
 
             .clearBtn {
