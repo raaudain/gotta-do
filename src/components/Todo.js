@@ -7,7 +7,7 @@ class Todo extends React.Component {
         // Changes class name when item is clicked.
         className={`item${this.props.item.isDone ? "Completed" : ""}`}
         onClick={() => this.props.toggleItem(this.props.item.id)}
-        draggable="false"
+        draggable="true"
       >
         <p>{this.props.item.task}</p>
       </div>
